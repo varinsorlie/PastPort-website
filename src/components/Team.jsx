@@ -26,14 +26,16 @@ import "./Team.css";
 import mathilde from "../assets/Portrett_Mathilde.png"
 import sofie from "../assets/Portrett_Sofie.png"
 import jakob from "../assets/Portrett_Jakob.jpg"
+import dmitry from "../assets/Portrett_Dmitry.png"
+import vaarin from "../assets/Portrett_Vaarin.png"
 
 function Team() {
   const members = [
-  { name: "Mathilde Altenborg", role: "Spillutvikler og researcher", img: mathilde },
-  { name: "Sofie Stubberud Aaslund", role: "Kommunikasjon og markedsføring", img: sofie },
+  { name: "Mathilde Altenborg", role: "Konseptutvikler og researcher", img: mathilde },
   { name: "Jakob Anthony", role: "Daglig leder og produktansvarlig", img: jakob },
-  { name: "Vårin Sørlie", role: "Teknisk ansvarlig", img: jakob },
-  { name: "Dmitry Solt", role: "Teknisk ansvarlig", img: jakob },
+  { name: "Sofie Stubberud Aaslund", role: "Kommunikasjon og markedsføring", img: sofie },
+  { name: "Vårin Sørlie", role: "Teknisk utvikler", img: vaarin },
+  { name: "Dmitry Solt", role: "Teknisk utvikler", img: dmitry },
 ];
 
   return (
@@ -44,6 +46,7 @@ function Team() {
           <div className="team-member" key={index}>
             <img className="avatar" src={member.img}>{member[0]}</img>
             <h3>{member.name}</h3>
+            <p>{member.role}</p>
           </div>
         ))}
       </div>
