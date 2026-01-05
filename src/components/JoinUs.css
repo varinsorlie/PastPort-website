@@ -1,0 +1,26 @@
+.join-us {
+  padding: 80px 20px;
+  text-align: center;
+  background: #f0f0f0;
+}
+
+.join-us form {
+  margin-top: 20px;
+}
+
+.join-us input {
+  padding: 10px;
+  width: 250px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.join-us button {
+  padding: 10px 20px;
+  margin-left: 10px;
+  border: none;
+  background-color: rgb(255, 164, 18);
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+}

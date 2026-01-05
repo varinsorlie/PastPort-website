@@ -1,0 +1,124 @@
+/* design for phone */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: none;
+  background-image:
+    linear-gradient(to bottom, rgba(255,255,255,0) 60%, rgba(230,223,204,0.85) 100%),
+    url("../assets/moderne-bakgrunn.png"); /* adjust path or keep inline url */
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.hero-inner {
+  max-width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.hero-visual img {
+  filter: drop-shadow(0 30px 60px rgba(0,0,0,0.25));
+  transform: none;
+  max-width: 100%;
+  height: 300px;
+  width: auto;
+  object-fit: contain;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  backdrop-filter: blur(6px);
+  background: rgba(255,255,255,0.02);
+  border-radius: 20px;
+  transform: translateY(-10px);
+  padding: 22px;
+  z-index: 3;
+}
+.hero-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+
+/* for larger screens */
+@media (min-width: 451px){
+    .hero {
+        min-height: 100vh;
+        height: 100vh;
+        padding: 80px 80px 60px;
+        display: flex;
+        align-items: flex-start; 
+        justify-content: flex-start;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        background-image:
+            linear-gradient(to bottom, rgba(255,255,255,0) 60%, rgba(230,223,204,0.85) 100%),
+            url("../assets/moderne-bakgrunn.png"); /* adjust path or keep inline url */
+        background-size: cover;
+        background-position: center top;
+        background-repeat: no-repeat;
+        position: relative;
+        }
+    .hero-inner {
+        max-width: 1200px;
+        height: 500px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+        z-index: 3; 
+    }
+    .hero-text {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        width: 100%;
+    }
+    .hero-text h1 {
+        font-size: 4rem;
+        font-weight: 700;
+        margin-bottom: 1rem;
+
+    }
+
+    .hero-visual {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-visual img {
+    max-width: none;
+    max-height: 500px;
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto;
+    filter: drop-shadow(0 30px 60px rgba(0,0,0,0.25));
+    transform: none;
+    }
+    
+}
+

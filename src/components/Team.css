@@ -1,0 +1,32 @@
+.team {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.team-grid {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.team-member {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 150px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.avatar {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  background: rgb(255, 164, 18);
+  color: #fff;
+  width: 150px;
+  height: 150px;
+  line-height: 50px;
+  border-radius: 50%;
+  margin: 0 auto 0px auto;
+}

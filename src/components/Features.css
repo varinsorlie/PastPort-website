@@ -1,0 +1,86 @@
+
+.features {
+  padding: 20px 20px;
+  text-align: center;
+}
+h2 {
+    font-size: 2rem;
+}
+
+.features-grid {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.platform-card {
+  margin: 2rem;
+  background: white;
+  border-radius: 20px;
+  padding: 32px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.feature-card {
+  background: white;
+  border-radius: 20px;
+  padding: 32px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+.feature-card:hover {
+  transform: translateY(-6px);
+}
+.features-image img{
+  width: 250px;        
+  height: 150px;      
+  object-fit: cover;    
+  border-radius: 10px; 
+}
+.cta {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  background-color: rgb(255, 164, 18);
+  color: black;
+  margin-right: 5px;
+}
+.cta:hover {
+    background-color: rgb(174, 91, 14);
+    color: white;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+    transform: translateY(-3px) scale(1.05);
+}
+.cta:active {
+  transform: translateY(0) scale(0.98);   
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+.bta {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  background-color: rgb(101, 152, 90);
+  color: black;
+  margin-left: 5px;
+}
+.bta:hover {
+    background-color:  rgb(57, 86, 50);
+    color: white;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3); 
+    transform: translateY(-3px) scale(1.05);
+}
+.bta:active {
+  transform: translateY(0) scale(0.98);   /* trykk-effekt */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
