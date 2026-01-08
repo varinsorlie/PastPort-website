@@ -31,9 +31,9 @@ import vaarin from "../assets/Portrett_Vaarin.png"
 
 function Team() {
   const members = [
-  { name: "Mathilde Altenborg", role: "Konseptutvikler og researcher", img: mathilde },
-  { name: "Jakob Anthony", role: "Daglig leder og produktansvarlig", img: jakob },
-  { name: "Sofie Stubberud Aaslund", role: "Kommunikasjon og markedsføring", img: sofie },
+  { name: "Mathilde Altenborg", role: "Prosjektleder og fagansvarlig", img: mathilde },
+  { name: "Jakob Anthony", role: "Daglig leder", img: jakob },
+  { name: "Sofie Stubberud Aaslund", role: "Kommunikasjon- og markedsansvarlig", img: sofie },
   { name: "Vårin Sørlie", role: "Teknisk utvikler", img: vaarin },
   { name: "Dmitry Solt", role: "Teknisk utvikler", img: dmitry },
 ];

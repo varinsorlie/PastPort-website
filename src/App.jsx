@@ -10,6 +10,7 @@ export default function App() {
    <div className="appen">
 
       <main className="main">
+         <Header />
         <section id="hero" className="hero-section">
           <Hero />
         </section>
@@ -22,9 +23,9 @@ export default function App() {
           <Team />
         </section>
 
-        <section id="join" className="join-section">
+        {/* <section id="join" className="join-section">
           <JoinUs />
-        </section>
+        </section> */}
       </main>
 
       <Footer />

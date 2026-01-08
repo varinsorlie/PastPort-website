@@ -1,16 +1,28 @@
 import React from "react";
+import { useState, useEffect } from "react";
 import "./Header.css";
 
 function Header() {
+    const [scrolled, setScrolled] = useState(false);
+
+    useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
   return (
-    <header className="header">
+     <header className={`top-bar ${scrolled ? "scrolled" : ""}`}>
       <div className="logo">PastPort</div>
-      <nav>
-        <ul>
-          <li><a href="#hero">Hjem</a></li>
-          <li><a href="#features">App</a></li>
-          <li><a href="#team">Om oss</a></li>
-          <li>
+       <nav>
+          <a href="https://pasthive.no">Platform</a>
+          <a href="#features">App</a>
+          <a href="#team">About us</a>
             <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -18,11 +30,10 @@ function Header() {
           window.location.href = "https://nettskjema.no/a/566846#/page/1";
         }}
       >
-        <button className="button-primary">Bli med</button>
+        <button className="button-primary">Join</button>
       </form>
             {/* <a className="button-primary" href="#join">Bli med</a> */}
-            </li>
-        </ul>
+            
       </nav>
     </header>
   );

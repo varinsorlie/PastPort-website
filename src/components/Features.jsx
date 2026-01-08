@@ -74,8 +74,8 @@ function Features() {
 
   return (
     <section className="features"> 
-      <h2>PastPort app</h2>
-      <div className="features-grid">
+      {/* <h2>PastPort app</h2> */}
+      {/* <div className="features-grid">
         {images.map((image) => (
             <div className="feature-card">
             <div key={image.id} className="features-image">
@@ -84,16 +84,16 @@ function Features() {
             </div>
             </div>
           ))}
-      </div>
+      </div> */}
     
-     <div className="platform-card">
+     {/* <div className="platform-card">
         <h2>PastHive</h2>
         <p>
             En plattform som muliggjør deling av historiske artikler, blogger og podcatster!
         </p>
         <button className="cta">Les mer her</button>
         <button className="bta">Utforsk</button>
-        </div>
+        </div> */}
     </section>
   );
 }

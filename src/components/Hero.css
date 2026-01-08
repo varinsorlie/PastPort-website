@@ -2,15 +2,14 @@
 .hero {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content:flex-start;
   margin: none;
-  background-image:
-    linear-gradient(to bottom, rgba(255,255,255,0) 60%, rgba(230,223,204,0.85) 100%),
-    url("../assets/moderne-bakgrunn.png"); /* adjust path or keep inline url */
+  background-image: url("../assets/ny-bakgrunn.jpg");
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
   position: relative;
+  color: white;
 }
 .hero-inner {
   max-width: 100%;
@@ -21,13 +20,40 @@
   position: relative;
   z-index: 2;
 }
+
+.app-column {
+   gap: calc(var(--spacing) * 12);
+   flex-direction: row;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   display: flex;
+   position: relative;
+}
+
+.features1 {
+   display: flex;
+   justify-content: center;
+   align-items: flex-end;
+   flex-direction: column;
+   flex-grow: 1;
+   flex-shrink: 1;
+   flex-basis: 0%;
+   max-width: var(--container-xs);
+}
 .hero-visual {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  width:auto;
   pointer-events: none;
-  z-index: 1;
+  z-index: 10;
+  position: relative;
+  flex-grow: 1;
+  flex-shrink: 1;
+  margin: 0;
+  padding: 0;
 }
 
 .hero-visual img {
@@ -37,17 +63,50 @@
   height: 300px;
   width: auto;
   object-fit: contain;
+  margin: 0;
+  padding: 0;
+}
+
+.features-column{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+    max-width: 20rem;
+
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    pointer-events: none; */
+}
+.feature-card {
+    backdrop-filter: blur(6px);
+    border-radius: 20px;
+    padding: 8px;
+    margin: 8px;
+    text-align: left;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+.feature-card:hover {
+    transform: translateY(-6px);
 }
 
 .hero-text {
   display: flex;
   flex-direction: column;
   align-self: center;
-  backdrop-filter: blur(6px);
-  background: rgba(255,255,255,0.02);
+  backdrop-filter: blur(1px);
+  background: rgba(227, 221, 221, 0.02);
   border-radius: 20px;
   transform: translateY(-10px);
   padding: 22px;
+  margin-top: 22px;
   z-index: 3;
 }
 .hero-text h1 {
@@ -56,43 +115,47 @@
   margin-bottom: 1rem;
 }
 
+.overlay {
+position: absolute;
+inset: 0;
+background: rgba(0,0,0,0.45);
+}
+
 
 /* for larger screens */
 @media (min-width: 451px){
     .hero {
-        min-height: 100vh;
-        height: 100vh;
-        padding: 80px 80px 60px;
+       height: 110vh;
+        background-image: 
+        linear-gradient(to bottom, rgba(255,255,255,0) 50%, rgba(191, 184, 163, 0.85) 100%),
+            url("../assets/ny-bakgrunn1.jpg"); 
+        background-size: cover;
+        background-position: center;
         display: flex;
-        align-items: flex-start; 
+        align-items: center;
         justify-content: flex-start;
-        background-position: center center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        overflow: hidden;
-        background-image:
-            linear-gradient(to bottom, rgba(255,255,255,0) 60%, rgba(230,223,204,0.85) 100%),
-            url("../assets/moderne-bakgrunn.png"); /* adjust path or keep inline url */
-        background-size: cover;
-        background-position: center top;
-        background-repeat: no-repeat;
-        position: relative;
+        color: white;
+        text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+        padding-top: 40px;
         }
+        
     .hero-inner {
         max-width: 1200px;
         height: 500px;
         width: 100%;
         margin: 0 auto;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
         position: relative;
-        z-index: 3; 
+         
     }
     .hero-text {
         display: flex;
         flex-direction: column;
         align-self: center;
+        align-content: center;
+        align-items: center;
         width: 100%;
     }
     .hero-text h1 {
@@ -106,19 +169,27 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        
     }
 
     .hero-visual img {
-    max-width: none;
-    max-height: 500px;
-    height: 100%;
-    width: auto;
-    object-fit: contain;
-    display: block;
-    margin: 0 auto;
-    filter: drop-shadow(0 30px 60px rgba(0,0,0,0.25));
-    transform: none;
+        /* max-width: none;
+        max-height: 600px;
+        height: 100%;
+        width: auto;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+        filter: drop-shadow(0 30px 60px rgba(0,0,0,0.25));
+        transform: none; */
+        filter: drop-shadow(0 30px 60px rgba(0,0,0,0.25));
+        transform: none;
+        max-width: 100%;
+        height: 400px;
+        width: auto;
+        object-fit: contain;
     }
+    
     
 }
 
