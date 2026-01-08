@@ -1,5 +1,6 @@
 
 .features {
+  margin-top: 200px;
   padding: 20px 20px;
   text-align: center;
 }
@@ -8,10 +9,10 @@ h2 {
 }
 
 .features-grid {
-  display: flex;
+  /* display: flex;
   gap: 20px;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: wrap; */
 }
 .platform-card {
   margin: 2rem;
@@ -24,9 +25,9 @@ h2 {
 }
 
 .feature-card {
-  background: white;
+  backdrop-filter: blur(6px);
   border-radius: 20px;
-  padding: 32px;
+  padding: 8px;
   text-align: center;
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
   transition: transform 0.3s ease;
