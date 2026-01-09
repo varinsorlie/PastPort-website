@@ -31,11 +31,30 @@ import vaarin from "../assets/Portrett_Vaarin.png"
 
 function Team() {
   const members = [
-  { name: "Mathilde Altenborg", role: "Prosjektleder og fagansvarlig", img: mathilde },
-  { name: "Jakob Anthony", role: "Daglig leder", img: jakob },
-  { name: "Sofie Stubberud Aaslund", role: "Kommunikasjon- og markedsansvarlig", img: sofie },
-  { name: "Vårin Sørlie", role: "Teknisk utvikler", img: vaarin },
-  { name: "Dmitry Solt", role: "Teknisk utvikler", img: dmitry },
+  { name: "Mathilde Altenborg", 
+    role: "Prosjektleder og fagansvarlig", 
+    education: "Lektor i historie (NTNU), Bachelor i historie (UiO), Bachelor i filmregi (NISS)",
+    img: mathilde },
+
+  { name: "Jakob Anthony", 
+    role: "Daglig leder", 
+    education: "Historiestudent i historie (UiO), Informatikkstudent i historie (UiO)",
+    img: jakob },
+
+  { name: "Sofie Stubberud Aaslund", 
+    role: "Kommunikasjon- og markedsansvarlig", 
+    education: "Masterstudent i arkeologi (UiO), Bachelor i arkeologi (UiO), Bachelor i kommunikasjonsledelse (BI)",
+    img: sofie },
+
+  { name: "Vårin Sørlie", 
+    role: "Teknisk utvikler", 
+    education: "Masterstudent i informatikk: programmering og systemarkitektur (UiO), Bachelor i informatikk: Design, bruk og interaksjon (UiO)",
+    img: vaarin },
+
+  { name: "Dmitry Solt", 
+    role: "Teknisk utvikler", 
+    education: "Masterstudent i informatikk: programmering og systemarkitektur (UiO), Bachelor i informatikk: Digital økonomi og ledelse (UiO)",
+    img: dmitry },
 ];
 
   return (
@@ -44,9 +63,10 @@ function Team() {
       <div className="team-grid">
         {members.map((member, index) => (
           <div className="team-member" key={index}>
-            <img className="avatar" src={member.img}>{member[0]}</img>
+            <img className="avatar" src={member.img} alt={member.name}>{member[0]}</img>
             <h3>{member.name}</h3>
             <p>{member.role}</p>
+            {/* <p>Utdanning: <br></br>{member.education}</p> */}
           </div>
         ))}
       </div>

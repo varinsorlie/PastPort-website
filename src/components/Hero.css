@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content:flex-start;
   margin: none;
-  background-image: url("../assets/ny-bakgrunn.jpg");
+  background-image: url("../assets/fin-bakgrunn.png");
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -118,7 +118,7 @@
 .overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0.45);
+    background: rgba(0,0,0,0.25);
 }
 
 
@@ -126,7 +126,7 @@
 @media (min-width: 451px){
     .hero {
        height: 832px;
-        background-image: url("../assets/ny-bakgrunn1.jpg"); 
+        background-image: url("../assets/fin-bakgrunn.png"); 
         /* linear-gradient(to bottom, rgba(255,255,255,0) 50%, rgba(191, 184, 163, 0.85) 100%),
             url("../assets/ny-bakgrunn1.jpg");  */
         background-size: cover;

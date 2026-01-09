@@ -28,7 +28,7 @@ function JoinUs() {
           window.location.href = "https://nettskjema.no/a/566846#/page/1";
         }}
       >
-        <button type="submit">Meld deg på</button>
+        <button className="button-primary">Meld deg på</button>
       </form>
     </section>
   );

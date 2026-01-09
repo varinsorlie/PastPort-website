@@ -43,33 +43,36 @@ import "./Features.css";
 import kort from  "../assets/4.png"
 import kart from "../assets/7.png"
 import quest from "../assets/5.png"
-import darkMockup from "../assets/mockup-app-dark.png"
+
 import appMockup from "../assets/mockup-app.png"
 
 
 function Features() {
 
-  const images = [
+  const features = [
     {
       id: 1,
       src: kart,
       alt: "map",
-      caption: "Oppdag kjente og ukjente historiske steder på kartet"
+      title: "Kart",
+      description: "Oppdag kjente og ukjente historiske steder på kartet"
     },
     {
       id: 2,
       src: quest,
       alt: "Quest",
-      caption: "Løs gåter og rebuser, og vinn premier"
+      title: "Quest",
+      description: "Løs gåter og rebuser, og vinn premier"
     },
     {
       id: 3,
       src: kort,
       alt: "Kort",
-      caption: "Samle historiekort fra stedene du besøker"
+      title: "Kort",
+      description: "Samle historiekort fra stedene du besøker"
     },
   ];
-  const features = [
+  const features2 = [
     { title: "Rask og enkel", description: "Bruk appen hvor som helst." },
     { title: "Sikkerhet i fokus", description: "Vi tar personvern på alvor." },
     { title: "Gratis prøveperiode", description: "Prøv uten kostnad i 7 dager." },
@@ -110,6 +113,7 @@ function Features() {
                 because we believe your neighborhood should feel like an adventure waiting to happen.
             </p>
         </div>
+        <h2>PastPort App</h2>
         <div className="app-column">
             {/* <div className="features1">
                 {images.map((image) => (
@@ -121,9 +125,11 @@ function Features() {
                 ))}
             </div> */}
 
-            <div className="mockup-visual">
+            {/* <div className="mockup-visual">
             <img src={appMockup} alt="App preview" />
-            </div>
+            </div> */}
+
+            
 
             <div className="features-column">
             {features.map((feature) => (
@@ -136,7 +142,26 @@ function Features() {
                 </div>
             ))}
             </div>
+          
         </div>
+        <div className="line"></div>
+           <div className="platform-card">
+        <h2>PastHive Plattform</h2>
+        <p>
+            En plattform som muliggjør deling av historiske artikler, blogger og podcaster!
+        </p>
+
+         <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          // naviger til pasthive når brukeren klikker submit
+          window.location.href = "https://pasthive.no";
+        }}
+      >
+        <button className="button-primary">Utforsk</button>
+      </form>
+       
+        </div> 
     </div>
   );
 }

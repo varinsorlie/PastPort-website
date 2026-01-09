@@ -23,9 +23,9 @@ export default function App() {
           <Team />
         </section>
 
-        {/* <section id="join" className="join-section">
+        <section id="join" className="join-section">
           <JoinUs />
-        </section> */}
+        </section>
       </main>
 
       <Footer />

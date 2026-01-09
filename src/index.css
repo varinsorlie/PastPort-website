@@ -1,20 +1,16 @@
 
-
-
-
 :root {
  
-
   font-family: 'Cinzel', serif;
   /* font-family: system-ui, Avenir, Helvetica, Arial, sans-serif; */
   line-height: 1.5;
   font-weight: 400;
   --bg-main: #4c463c;
-  --bg-second-main: #504a3d;       /* pergament */
-  --bg-soft: #eef6f3;      /* lys grønn/blå */
+  --bg-second-main: #504a3d;     
+  --bg-soft: #eef6f3;     
   --text-dark: #1f2933;
-  --accent: #E9B845;       /* gul CTA */
-  --accent-hover: #fb8a01;
+  --accent: #708C98;       /* knapp */
+  --accent-hover: #3B7994;  /* knapp :hover*/
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -112,7 +108,7 @@ button:focus-visible {
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color:  #24637A;
+    background-color:  #364B55;
   }
   a:hover {
     color: #747bff;

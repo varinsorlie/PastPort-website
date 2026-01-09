@@ -20,9 +20,9 @@ function Header() {
      <header className={`top-bar ${scrolled ? "scrolled" : ""}`}>
       <div className="logo">PastPort</div>
        <nav>
-          <a href="https://pasthive.no">Platform</a>
+          <a href="https://pasthive.no">Plattform</a>
           <a href="#features">App</a>
-          <a href="#team">About us</a>
+          <a href="#team">Om oss</a>
             <form
         onSubmit={(e) => {
           e.preventDefault();
@@ -30,7 +30,7 @@ function Header() {
           window.location.href = "https://nettskjema.no/a/566846#/page/1";
         }}
       >
-        <button className="button-primary">Join</button>
+        <button className="button-primary">Bli med</button>
       </form>
             {/* <a className="button-primary" href="#join">Bli med</a> */}
             

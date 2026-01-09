@@ -3,11 +3,19 @@
   padding: 20px 20px;
   text-align: center;
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 h2 {
     font-size: 2rem;
 }
-
+.line {
+    height: 1px;
+    width: 40%;
+    background-color:  var(--accent)  ;
+    margin: 3rem;
+}
 .app-column {
    gap: calc(var(--spacing) * 12);
    flex-direction: column;
@@ -44,10 +52,11 @@ h2 {
 }
 
 .platform-card {
-  margin: 2rem;
+  max-width: 720px;
   background: white;
+  color: black;
   border-radius: 20px;
-  padding: 32px;
+  padding: 48px;
   text-align: center;
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
   transition: transform 0.3s ease;
@@ -206,6 +215,9 @@ h2 {
     min-height: auto;
   }
 
+  .about {
+    width: 50%;
+  }
   .mockup-visual {
     max-width: 92%;
     height: 420px;
@@ -219,6 +231,7 @@ h2 {
   }
 
   .features-column {
+    flex-direction: row;
     width: 92%;
     max-width: 720px;
     align-items: center;
