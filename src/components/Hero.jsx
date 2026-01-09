@@ -42,40 +42,13 @@ function Hero() {
     <div className="overlay"></div>
     <div className="hero-inner">
         <div className="hero-text">
-        <h1>Unlock The Past</h1>
+        <h1>Utforsk historien</h1>
         <p>
-            Your history portal through action, gamification and activity!
+            Din portal til historie gjennom spill og læring!
         </p>
-        <button className="button-primary">Play</button>
+        {/* <button className="button-primary">Play</button> */}
         </div>
 
-        <div className="app-column">
-            <div className="features1">
-                {images.map((image) => (
-                <div className="feature-card">
-                    <div key={image.id} className="features-image">
-                    <p>{image.caption}</p>
-                    </div>
-                </div>
-                ))}
-            </div>
-
-            <div className="hero-visual">
-            <img src={darkMockup} alt="App preview" />
-            </div>
-
-            <div className="features-column">
-            {features.map((feature) => (
-                <div className="feature-card">
-                <div key={feature.id} className="features-image">
-                {/* <img src={image.src} alt={image.alt} /> */}
-                <h3>{feature.title}</h3>
-                <p>{feature.description}</p>
-                </div>
-                </div>
-            ))}
-            </div>
-        </div>
       
     </div>
     </div>

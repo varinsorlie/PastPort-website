@@ -1,6 +1,5 @@
 
 .top-bar {
-  
   box-sizing: border-box;
   display: flex;
   justify-content: space-between;
@@ -12,6 +11,8 @@
   height: 60px;
   color: white;
   padding: 0 24px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   z-index: 10;
   width: 100%;
   transition: background-color 0.3s ease;
@@ -23,16 +24,22 @@
 }
 
 .top-bar .logo {
-  
-  font-size: 1.5rem;
-  font-weight: bold;
+  color: #FFF;
+  font-family: jsMath-cmr10;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 
 .top-bar nav a {
-  font-weight: 500;
-  color: #ffffff;
-  cursor: pointer;
-  transition: all 0.3s ease;
+  color: #FFF;
+
+font-family: jsMath-cmr10;
+font-size: 24px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
 }
 
 .top-bar nav {
