@@ -4,7 +4,7 @@
   flex-direction: column;
   justify-content:flex-start;
   margin: none;
-  background-image: url("../assets/ny-bakgrunn.jpg");
+  background-image: url("../assets/fin-bakgrunn.png");
   background-size: cover;
   background-position: center top;
   background-repeat: no-repeat;
@@ -85,7 +85,7 @@
     pointer-events: none; */
 }
 .feature-card {
-    backdrop-filter: blur(6px);
+    /* backdrop-filter: blur(6px); */
     border-radius: 20px;
     padding: 8px;
     margin: 8px;
@@ -101,7 +101,7 @@
   display: flex;
   flex-direction: column;
   align-self: center;
-  backdrop-filter: blur(1px);
+  /* backdrop-filter: blur(1px); */
   background: rgba(227, 221, 221, 0.02);
   border-radius: 20px;
   transform: translateY(-10px);
@@ -116,19 +116,19 @@
 }
 
 .overlay {
-position: absolute;
-inset: 0;
-background: rgba(0,0,0,0.45);
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.25);
 }
 
 
 /* for larger screens */
 @media (min-width: 451px){
     .hero {
-       height: 110vh;
-        background-image: 
-        linear-gradient(to bottom, rgba(255,255,255,0) 50%, rgba(191, 184, 163, 0.85) 100%),
-            url("../assets/ny-bakgrunn1.jpg"); 
+       height: 832px;
+        background-image: url("../assets/fin-bakgrunn.png"); 
+        /* linear-gradient(to bottom, rgba(255,255,255,0) 50%, rgba(191, 184, 163, 0.85) 100%),
+            url("../assets/ny-bakgrunn1.jpg");  */
         background-size: cover;
         background-position: center;
         display: flex;
@@ -153,42 +153,33 @@ background: rgba(0,0,0,0.45);
     .hero-text {
         display: flex;
         flex-direction: column;
-        align-self: center;
-        align-content: center;
-        align-items: center;
+        align-self: flex-start;
+        align-content: flex-start;
+        align-items: flex-start;
         width: 100%;
     }
     .hero-text h1 {
-        font-size: 4rem;
-        font-weight: 700;
-        margin-bottom: 1rem;
-
+        width: 515px;
+        height: 232px;
+        text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+        font-family: jsMath-cmr10;
+        font-size: 96px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+    }
+    .hero-text p {
+        width: 546px;
+        height: 131px;
+        color: #FFF;
+        font-family: "Abhaya Libre";
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
     }
 
-    .hero-visual {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        
-    }
-
-    .hero-visual img {
-        /* max-width: none;
-        max-height: 600px;
-        height: 100%;
-        width: auto;
-        object-fit: contain;
-        display: block;
-        margin: 0 auto;
-        filter: drop-shadow(0 30px 60px rgba(0,0,0,0.25));
-        transform: none; */
-        filter: drop-shadow(0 30px 60px rgba(0,0,0,0.25));
-        transform: none;
-        max-width: 100%;
-        height: 400px;
-        width: auto;
-        object-fit: contain;
-    }
+  
     
     
 }

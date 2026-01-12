@@ -1,20 +1,16 @@
 
-
-
-
 :root {
  
-
   font-family: 'Cinzel', serif;
   /* font-family: system-ui, Avenir, Helvetica, Arial, sans-serif; */
   line-height: 1.5;
   font-weight: 400;
   --bg-main: #4c463c;
-  --bg-second-main: #504a3d;       /* pergament */
-  --bg-soft: #eef6f3;      /* lys grønn/blå */
+  --bg-second-main: #504a3d;     
+  --bg-soft: #eef6f3;     
   --text-dark: #1f2933;
-  --accent: #E9B845;       /* gul CTA */
-  --accent-hover: #fb8a01;
+  --accent: #708C98;       /* knapp */
+  --accent-hover: #3B7994;  /* knapp :hover*/
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
@@ -34,17 +30,23 @@
   padding: 8px 30px;
   border: none;
   border-radius: 8px;
-  font-size: 1rem;
   cursor: pointer;
   transition: all 0.3s ease;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   color: black;
   margin-left: 5px;
+  color: #FFF;
+  font-family: jsMath-cmr10;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
 }
 .button-primary:hover {
     background-color: var(--accent-hover);
     box-shadow: 0 8px 16px rgba(0,0,0,0.3); 
     transform: translateY(-3px) scale(1.05);
+
 }
 
 h1 {
@@ -106,7 +108,7 @@ button:focus-visible {
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color:  #C2B397;
+    background-color:  #364B55;
   }
   a:hover {
     color: #747bff;
