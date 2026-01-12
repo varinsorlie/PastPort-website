@@ -44,7 +44,6 @@ import kort from  "../assets/4.png"
 import kart from "../assets/7.png"
 import quest from "../assets/5.png"
 
-import appMockup from "../assets/mockup-app.png"
 
 
 function Features() {
