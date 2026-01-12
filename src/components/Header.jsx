@@ -20,8 +20,9 @@ function Header() {
      <header className={`top-bar ${scrolled ? "scrolled" : ""}`}>
       <div className="logo">PastPort</div>
        <nav>
-          <a href="https://pasthive.no">Plattform</a>
+         
           <a href="#features">App</a>
+           <a href="https://pasthive.no">Plattform</a>
           <a href="#team">Om oss</a>
             <form
         onSubmit={(e) => {

@@ -3,6 +3,17 @@
   text-align: center;
   margin-bottom: 6rem;
 }
+.om-oss {
+  font-size: 1.4rem;
+  color: white;
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+}
+.om-oss p {
+  font-size: 1.4rem;
+  color: white;
+}
 .team h2 {
     color: white;
 }

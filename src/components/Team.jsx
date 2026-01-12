@@ -60,6 +60,14 @@ function Team() {
   return (
     <section className="team">
       <h2>Om oss</h2>
+      <div className="om-oss">
+        <p>
+        Pastport bringer fortiden til live ved å knytte historier til steder og objekter.
+        Vi gjør historisk kunnskap spennende og enkelt tilgjengelig for folk flest, 
+        samtidig som vi hjelper fagmiljøet å nå ut til flere med kvalitetssikret innhold. 
+        Dette gjør vi gjennom en kartbasert app for publikum og en publiseringsplattform for fagfolk. 
+        </p>
+      </div>
       <div className="team-grid">
         {members.map((member, index) => (
           <div className="team-member" key={index}>

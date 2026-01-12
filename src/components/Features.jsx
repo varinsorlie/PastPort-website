@@ -54,22 +54,25 @@ function Features() {
       id: 1,
       src: kart,
       alt: "map",
-      title: "Kart",
-      description: "Oppdag kjente og ukjente historiske steder på kartet"
+      feat: "Kart",
+      title: "Finn interessante historier på kartet",
+      description: "Velg historiske temaer og epoker for innholdet du vil få opp på kartet og utforsk historiske steder du er interessert i."
     },
     {
       id: 2,
       src: quest,
       alt: "Quest",
-      title: "Quest",
-      description: "Løs gåter og rebuser, og vinn premier"
+      feat: "Quest",
+      title: "Løs gåter og rebuser, og vinn premier",
+      description: "Gå ut på spennende rebuser og oppdrag som bringer historien til live med interaktive historiefortellinger."
     },
     {
       id: 3,
       src: kort,
-      alt: "Kort",
-      title: "Kort",
-      description: "Samle historiekort fra stedene du besøker"
+      alt: "kort",
+      feat: "Kort",
+      title: "Skap din digitale kolleksjon",
+      description: "Plukk opp historiske objekter for å samle unike historiekort som gjenspeiler den lokale kulturen og historien."
     },
   ];
   const features2 = [
@@ -104,13 +107,17 @@ function Features() {
         
         <div className="about">
             <p>
-                Stepcraft is lovingly crafted in The Hague, 
-                by developers who turned their own struggle with sedentary work-life into gaming magic.
+                I dag oppdager vi historiske steder gjennom de samme “topp 10”-listene på nettet, 
+                og går glipp av hundrevis av skjulte perler rett rundt oss.
                 <p></p>
-                Together, we're proof that the best games solve real problems. 
-                Our daily walks through the deer-lined paths of Haagse Bos fuel both our creativity 
-                and our commitment to making movement magical for everyone – 
-                because we believe your neighborhood should feel like an adventure waiting to happen.
+                Vår app lar deg utforske både kjente og ukjente historiske steder i ditt nærområde, 
+                tilpasset akkurat dine interesser. Velg selv hvilke tidsepoker eller historiske 
+                temaer du vil utforske, og få kun relevante steder vist på kartet.
+                 <p></p>
+                Hvert sted byr på levende formidling gjennom tekst, lyd og bilder, 
+                og du kan løse interaktive oppdrag som tar deg med på små historiske eventyr. 
+                Underveis samler du unike historiekort og objekter inspirert av lokal kultur og historie, 
+                og bygger din egen personlige samling av fortiden.
             </p>
         </div>
         <h2>PastPort App</h2>
@@ -136,14 +143,23 @@ function Features() {
                 <div className="feature-card">
                 <div key={feature.id} className="features-image">
                 {/* <img src={image.src} alt={image.alt} /> */}
+                <h2>{feature.feat}</h2>
                 <h3>{feature.title}</h3>
                 <p>{feature.description}</p>
                 </div>
                 </div>
             ))}
             </div>
-          
         </div>
+         <form
+        onSubmit={(e) => {
+          e.preventDefault();
+          // naviger til pasthive når brukeren klikker submit
+          window.location.href = "https://pasthive.no";
+        }}
+      >
+        <button className="button-primary">Spill</button>
+      </form>
         <div className="line"></div>
            <div className="platform-card">
         <h2>PastHive Plattform</h2>

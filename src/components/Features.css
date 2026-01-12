@@ -218,6 +218,10 @@ h2 {
   .about {
     width: 50%;
   }
+    .about p {
+    font-size: 1.4rem;
+  }
+
   .mockup-visual {
     max-width: 92%;
     height: 420px;
