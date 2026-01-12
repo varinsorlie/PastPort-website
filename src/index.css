@@ -9,7 +9,7 @@
   --bg-second-main: #504a3d;     
   --bg-soft: #eef6f3;     
   --text-dark: #1f2933;
-  --accent: #708C98;       /* knapp */
+  --accent: #DAD0BC;       /* knapp */
   --accent-hover: #3B7994;  /* knapp :hover*/
 
   color-scheme: light dark;
@@ -35,7 +35,7 @@
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
   color: black;
   margin-left: 5px;
-  color: #FFF;
+  color: black;
   font-family: jsMath-cmr10;
   font-size: 24px;
   font-style: normal;
@@ -108,7 +108,7 @@ button:focus-visible {
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
-    background-color:  #364B55;
+    background-color:  #681818;
   }
   a:hover {
     color: #747bff;

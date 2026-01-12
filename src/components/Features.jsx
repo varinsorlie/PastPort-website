@@ -38,7 +38,7 @@
 //     </section>
 //   );
 // }
-import React from "react";
+import React, { useEffect } from "react";
 import "./Features.css";
 import kort from  "../assets/4.png"
 import kart from "../assets/7.png"
@@ -81,6 +81,22 @@ function Features() {
     { title: "Gratis prøveperiode", description: "Prøv uten kostnad i 7 dager." },
   ];
 
+//    useEffect(() => {
+//     const id = "launchlist-widget-script";
+//     if (!document.getElementById(id)) {
+//       const s = document.createElement("script");
+//       s.id = id;
+//       s.src = "https://getlaunchlist.com/js/widget.js";
+//       s.async = true;
+//       document.body.appendChild(s);
+//     }
+//     // optional cleanup (keeps script if other pages use it)
+//     return () => {
+//       // do not remove if you want widget persistent across navigations
+//       // const el = document.getElementById(id); if (el) document.body.removeChild(el);
+//     };
+//   }, []);
+  
   return (
     
     <div className="features"> 
@@ -109,7 +125,8 @@ function Features() {
             <p>
                 I dag oppdager vi historiske steder gjennom de samme “topp 10”-listene på nettet, 
                 og går glipp av hundrevis av skjulte perler rett rundt oss.
-                <p></p>
+                <br></br>
+                <br></br>
                 Vår app lar deg utforske både kjente og ukjente historiske steder i ditt nærområde, 
                 tilpasset akkurat dine interesser. Velg selv hvilke tidsepoker eller historiske 
                 temaer du vil utforske, og få kun relevante steder vist på kartet.
@@ -120,6 +137,8 @@ function Features() {
                 og bygger din egen personlige samling av fortiden.
             </p>
         </div>
+
+        <div className="app-box">
         <h2>PastPort App</h2>
         <div className="app-column">
             {/* <div className="features1">
@@ -136,8 +155,6 @@ function Features() {
             <img src={appMockup} alt="App preview" />
             </div> */}
 
-            
-
             <div className="features-column">
             {features.map((feature) => (
                 <div className="feature-card">
@@ -151,7 +168,22 @@ function Features() {
             ))}
             </div>
         </div>
-         <form
+        </div>
+        
+        {/* <div
+            className="launchlist-widget"
+            data-key-id="aARg9m"
+            data-height="180px"
+        ></div>
+
+        <iframe className="leaderboard"
+            title="launchlist-leaderboard"
+            src="https://getlaunchlist.com/w/e/aARg9m/leaderboard"
+            style={{ width: "20%", display: "block", border: "none", height: "60vh" }}
+            loading="lazy"
+        /> */}
+
+         {/* <form
         onSubmit={(e) => {
           e.preventDefault();
           // naviger til pasthive når brukeren klikker submit
@@ -160,11 +192,19 @@ function Features() {
       >
         <button className="button-primary">Spill</button>
       </form>
-        <div className="line"></div>
+ */}
+
            <div className="platform-card">
         <h2>PastHive Plattform</h2>
-        <p>
+        {/* <p>
             En plattform som muliggjør deling av historiske artikler, blogger og podcaster!
+        </p> */}
+        <p>
+            Pasthive er en plattform der fagfolk kan publisere historisk forskning og kunnskap med tekst, 
+            lyd og bilde. Den gir publikum nye måter å navigere kunnskap om fortiden på, uten å være avhengig 
+            av å lese lange fagartikler og tidsskrifter. Samtidig er det et faglig rom der kvalifiserte fagfolk 
+            kan diskutere og kommentere hverandres arbeid for å fremme kunnskapsutvikling. Innhold i Pasthive 
+            kan også formidles i Pastport-appen med kildehenvisninger, med formål omat fagfolks arbeid når ut til flere.
         </p>
 
          <form

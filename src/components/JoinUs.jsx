@@ -19,7 +19,19 @@ import "./JoinUs.css";
 function JoinUs() {
   return (
     <section className="join-us">
-      <h2>Test appen!</h2>
+     {/* <div className="join-iframe-wrapper">
+        <iframe
+          title="signup-form"
+          src="https://script.google.com/macros/s/AKfycbwHTXF43Ncd0dO6xQwN4vbQaS0QfRhxEQbsk2CuR5YnLGA_csji-TsPSHrHL73-N2PwXg/exec"
+          width="100%"
+          height="900"
+          style={{ border: "none", display: "block" }}
+          loading="lazy"
+        ></iframe>
+      </div> */}
+
+
+      {/* <h2>Test appen!</h2>
       <p>Meld deg på i nettskjema for å få være med på å teste appen. <br></br> Du kan også søke om å bli en del av teamet vårt for videre utvikling!</p>
       <form
         onSubmit={(e) => {
@@ -29,7 +41,7 @@ function JoinUs() {
         }}
       >
         <button className="button-primary">Meld deg på</button>
-      </form>
+      </form> */}
     </section>
   );
 }
