@@ -1,6 +1,4 @@
 .features {
-  margin-top: 32px;
-  padding: 20px 20px;
   text-align: center;
   color: white;
   display: flex;
@@ -9,12 +7,15 @@
 }
 h2 {
     font-size: 2rem;
+    margin-bottom: 2rem;
 }
-.line {
-    height: 1px;
-    width: 40%;
-    background-color:  var(--accent)  ;
-    margin: 3rem;
+
+.app-box {
+    width: 100%;
+    background-color: #DAD0BC;
+    color: black;
+    padding-top: 3rem;
+    padding-bottom: 5rem;
 }
 .app-column {
    gap: calc(var(--spacing) * 12);
@@ -60,6 +61,17 @@ h2 {
   text-align: center;
   box-shadow: 0 10px 30px rgba(0,0,0,0.08);
   transition: transform 0.3s ease;
+  margin-top: 5rem;
+}
+.features-column {
+       display: flex;
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      gap: 16px;
+      padding: 12px;
+      justify-content: flex-start;
+      scrollbar-width: none; 
 }
 
 .feature-card {
@@ -81,6 +93,7 @@ h2 {
   object-fit: cover;    
   border-radius: 10px; 
 }
+
 /* .cta {
   padding: 12px 30px;
   border: none;
@@ -217,9 +230,12 @@ h2 {
 
   .about {
     width: 50%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
   }
     .about p {
     font-size: 1.4rem;
+    margin: 0;
   }
 
   .mockup-visual {

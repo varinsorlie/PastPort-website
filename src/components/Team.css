@@ -1,7 +1,8 @@
 .team {
-  padding: 80px 20px;
+  
   text-align: center;
-  margin-bottom: 6rem;
+  margin-bottom: 5rem;
+  margin-top: 5rem;
 }
 .om-oss {
   font-size: 1.4rem;
@@ -13,9 +14,11 @@
 .om-oss p {
   font-size: 1.4rem;
   color: white;
+  margin-bottom: 4rem;
 }
 .team h2 {
     color: white;
+    margin: 1rem;
 }
 
 .team-grid {

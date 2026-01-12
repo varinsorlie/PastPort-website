@@ -18,7 +18,7 @@ import "./Footer.css";
 function Footer() {
   return (
     <footer className="footer">
-       <a href="mailto:admin@pasthive.no" className="email-link">Kontakt oss: request@pasthive.no</a>
+       <a href="mailto:support@pasthive.no" className="email-link">Kontakt oss: support@pasthive.no</a>
       <p>&copy; {new Date().getFullYear()} PastPort. Alle rettigheter reservert.</p>
     </footer>
   );

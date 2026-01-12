@@ -5,11 +5,11 @@
   align-items: center;
   justify-content: center;
   padding: 40px 20px;
-  background-color:  #708C98;
-  color: #fff;
+  background-color:  #DAD0BC;
+  color: black;
 }
 
 .footer a {
-     color: #fff;
+     color: black;
      font-size: larger;
 }

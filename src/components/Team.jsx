@@ -57,6 +57,7 @@ function Team() {
     img: dmitry },
 ];
 
+
   return (
     <section className="team">
       <h2>Om oss</h2>
