@@ -1,6 +1,6 @@
 # PastPort Website
 
-Landing page for PastPort - built with React + Vite.
+Landing page for PastPort - built with React + Next.js.
 
 ## 🚀 Quick Start
 
