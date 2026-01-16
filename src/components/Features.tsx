@@ -21,7 +21,7 @@ const features = [
     title: "Quest",
     headline: "Løs gåter og oppdrag",
     description:
-      "Delta i interaktive eventyr som bringer historien til live rundt deg.",
+      "Delta i interaktive eventyr som bringer historien til live.",
   },
   {
     id: 3,
@@ -80,10 +80,10 @@ export default function Features() {
         {/* Section header */}
         <div className="text-center px-4 mb-12">
           <h2 className="text-3xl md:text-6xl font-bold text-white mb-4">
-            PastPort App
+            Pastport
           </h2>
           <p className="text-lg text-white/80 max-w-2xl mx-auto">
-            Alt du trenger for å oppdage fortiden i lomma
+            Alt du trenger for å oppdage fortiden – rett i lomma
           </p>
         </div>
 

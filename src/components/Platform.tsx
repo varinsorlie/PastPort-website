@@ -27,7 +27,7 @@ export default function Platform() {
             For fagfolk
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-[var(--text-dark)] mb-4">
-            PastHive Plattform
+            Pasthive
           </h2>
           <p className="text-lg text-[var(--text-dark)]/80 max-w-2xl mx-auto">
             En plattform der historikere, arkeologer og andre fagfolk kan
@@ -72,7 +72,7 @@ export default function Platform() {
             rel="noopener noreferrer"
             className="inline-block bg-[var(--burgundy)] text-white text-lg px-10 py-4 rounded-full font-semibold shadow-lg hover:opacity-90 transition-opacity"
           >
-            Utforsk PastHive
+            Utforsk Pasthive
           </Link>
         </div>
       </div>

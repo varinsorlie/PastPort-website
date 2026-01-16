@@ -19,7 +19,7 @@ export default function Header() {
   const navLinks = [
     { href: "#features", label: "App" },
     { href: "https://pasthive.no", label: "Plattform", external: true },
-    { href: "#team", label: "Om oss" },
+    { href: "#team", label: "Teamet" },
   ];
 
   return (
@@ -37,7 +37,7 @@ export default function Header() {
             href="/"
             className="text-2xl md:text-3xl font-bold text-white tracking-wide font-[var(--font-cinzel)]"
           >
-            PastPort
+            Pastport
           </Link>
 
           {/* Desktop Navigation */}

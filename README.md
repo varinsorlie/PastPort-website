@@ -6,7 +6,7 @@ Landing page for PastPort - built with React + Next.js.
 
 ### Prerequisites
 
-- Node.js (v20.19+ or v22.12+)
+- Node.js
 - npm
 - Firebase CLI (`npm install -g firebase-tools`)
 
@@ -24,7 +24,7 @@ Start the local development server with hot reload:
 npm run dev
 ```
 
-Open http://localhost:5173 in your browser.
+Open http://localhost:3000 in your browser.
 
 ## 📦 Build & Deploy
 
@@ -61,18 +61,28 @@ GitHub Actions are configured to automatically deploy:
 
 ```
 PastPort-website/
-├── src/
-│   ├── components/     # React components
-│   ├── assets/         # Images and static assets
-│   ├── App.jsx         # Main App component
-│   ├── App.css         # App styles
-│   ├── main.jsx        # Entry point
-│   └── index.css       # Global styles
-├── public/             # Static files
-├── dist/               # Production build (generated)
-├── firebase.json       # Firebase Hosting config
-├── .firebaserc         # Firebase project settings
-└── vite.config.js      # Vite configuration
+src/
+├── app/
+│   ├── globals.css      # Global styles + Tailwind
+│   ├── layout.tsx       # Root layout + SEO metadata
+│   ├── page.tsx         # Home page
+│   ├── sitemap.ts       # Dynamic sitemap generation
+│   └── robots.ts        # Robots.txt configuration
+├── components/
+│   ├── Header.tsx       # Fixed navigation
+│   ├── Hero.tsx         # Hero section
+│   ├── About.tsx        # About/intro section
+│   ├── Features.tsx     # App features (scrollable cards)
+│   ├── Platform.tsx     # PastHive platform section
+│   ├── Team.tsx         # Team members (scrollable cards)
+│   ├── CTA.tsx          # Call to action
+│   └── Footer.tsx       # Footer
+public/
+├── images/              # Static images
+│   ├── team/            # Team member photos
+│   └── ...
+├── favicon.svg          # Site favicon
+└── manifest.json        # PWA manifest
 ```
 
 ## 🛠 Available Scripts
@@ -87,5 +97,5 @@ PastPort-website/
 
 ## 🔗 Links
 
-- **Live Site:** https://pastport-482001.web.app
+- **Live Site:** https://pastport.no or https://pastport-482001.web.app
 - **Firebase Console:** https://console.firebase.google.com/project/pastport-482001

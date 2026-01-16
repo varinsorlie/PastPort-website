@@ -59,7 +59,18 @@ export default function LeadForm() {
         <section id="signup" className="pt-10 pb-20 md:pt-1 md:pb-32 bg-[var(--burgundy)]">
             <div className="container mx-auto px-6">
                 <div className="max-w-4xl mx-auto">
-                    {/* Counter Badge */}
+                    {/* Header */}
+                    <div className="text-center mb-8">
+                        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+                            Bli en av våre første brukere
+                        </h2>
+                        <p className="text-lg text-white/80 max-w-2xl mx-auto">
+                            Vær blant de første som opplever Pastport! Få tidlig tilgang til appen
+                            og hjelp oss med å forme fremtidens historieopplevelse.
+                        </p>
+                    </div>
+
+                    {/* Counter Badge - moved below description */}
                     <div className="flex justify-center mb-8">
                         <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20">
                             <div className="flex -space-x-2">
@@ -81,17 +92,6 @@ export default function LeadForm() {
                                 </span>
                             </div>
                         </div>
-                    </div>
-
-                    {/* Header */}
-                    <div className="text-center mb-12">
-                        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                            Bli med som Alpha-tester
-                        </h2>
-                        <p className="text-lg text-white/80 max-w-2xl mx-auto">
-                            Vær blant de første som opplever PastPort! Få tidlig tilgang til appen
-                            og hjelp oss med å forme fremtidens historieopplevelse.
-                        </p>
                     </div>
 
                     {/* Form Card */}
@@ -168,7 +168,7 @@ export default function LeadForm() {
                                                 Sender...
                                             </span>
                                         ) : (
-                                            'Meld meg på Alpha-testing'
+                                            'Meld meg på'
                                         )}
                                     </button>
                                 </div>

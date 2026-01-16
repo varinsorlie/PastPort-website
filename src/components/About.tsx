@@ -28,9 +28,7 @@ export default function About() {
             Historien rundt deg
           </h2>
           <p className="text-lg md:text-xl text-[var(--text-dark)]/80 max-w-3xl mx-auto leading-relaxed">
-            Gå forbi de typiske turistlistene og oppdag hundrevis av historiske
-            steder i ditt nærområde. Velg epoker og temaer som interesserer deg,
-            og la fortiden komme til live.
+            La fortiden komme til live ved å oppdage skjulte skatter! Velg epoker og temaer som interesserer deg.
           </p>
         </div>
 

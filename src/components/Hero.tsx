@@ -22,15 +22,13 @@ export default function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-5xl mx-auto px-4 md:px-8 text-center -mt-20 md:-mt-32">
-        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight drop-shadow-2xl font-[var(--font-cinzel)]">
-          Utforsk
-          <br />
-          <span className="text-[var(--accent)]">Fortiden</span>
+      <div className="relative z-10 max-w-5xl mx-auto px-4 md:px-8 text-center mt-8 md:mt-12">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-2xl font-[var(--font-cinzel)]">
+          <span className="text-[var(--accent)]">Utforsk fortiden</span>
         </h1>
 
         <p className="text-xl sm:text-2xl md:text-3xl text-white/90 max-w-2xl mx-auto mb-10 drop-shadow-lg">
-          Din portal til historie gjennom spill og læring
+          Din portal til fortiden
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
