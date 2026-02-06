@@ -36,10 +36,10 @@ function TeamCard({ member }: { member: (typeof members)[0] }) {
     <div
       className="
         flex-shrink-0 w-[180px] md:w-[200px] scroll-snap-align-center
-        bg-[var(--accent)] rounded-2xl p-4 text-center shadow-lg card-hover
+        bg-[var(--burgundy)] rounded-2xl p-4 text-center shadow-lg card-hover
       "
     >
-      <div className="relative w-full aspect-square rounded-xl overflow-hidden mb-4 bg-[var(--burgundy)]/10">
+      <div className="relative w-full aspect-square rounded-xl overflow-hidden mb-4 bg-white/10">
         <Image
           src={member.image}
           alt={member.name}
@@ -48,10 +48,10 @@ function TeamCard({ member }: { member: (typeof members)[0] }) {
           sizes="200px"
         />
       </div>
-      <h3 className="font-bold text-[var(--text-dark)] text-sm md:text-base">
+      <h3 className="font-bold text-white text-sm md:text-base">
         {member.name}
       </h3>
-      <p className="text-[var(--text-dark)]/60 text-xs md:text-sm mt-1">
+      <p className="text-white/70 text-xs md:text-sm mt-1">
         {member.role}
       </p>
     </div>
@@ -60,16 +60,15 @@ function TeamCard({ member }: { member: (typeof members)[0] }) {
 
 export default function Team() {
   return (
-    <section id="team" className="section-padding bg-[var(--burgundy)]">
+    <section id="team" className="section-padding bg-[var(--accent)]">
       <div className="max-w-6xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-[var(--text-dark)] mb-4">
             Teamet
           </h2>
-          <p className="text-lg text-white/80 max-w-2xl mx-auto">
-            Vi bringer fortiden til live ved å knytte historier til steder.
-            Vårt mål er å gjøre historie spennende og tilgjengelig for alle.
+          <p className="text-lg text-[var(--text-dark)]/80 max-w-2xl mx-auto">
+            Vi er en tverrfaglig gjeng med bakgrunn fra historie, arkeologi, kommunikasjon, salg, og programmering.
           </p>
         </div>
 

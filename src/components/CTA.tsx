@@ -56,15 +56,14 @@ export default function LeadForm() {
     };
 
     return (
-        <section id="signup" className="pt-10 pb-20 md:pt-1 md:pb-32 bg-[var(--burgundy)]">
-            <div className="container mx-auto px-6">
-                <div className="max-w-4xl mx-auto">
-                    {/* Header */}
-                    <div className="text-center mb-8">
-                        <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                            Bli en av våre første brukere
+        <section id="signup" className="section-padding bg-[var(--accent)]">
+            <div className="max-w-4xl mx-auto">
+                {/* Header */}
+                <div className="text-center mb-8">
+                    <h2 className="text-3xl md:text-4xl font-bold text-[var(--text-dark)] mb-4">
+                        Bli en av våre første brukere
                         </h2>
-                        <p className="text-lg text-white/80 max-w-2xl mx-auto">
+                        <p className="text-lg text-[var(--text-dark)]/80 max-w-2xl mx-auto">
                             Vær blant de første som opplever Pastport! Få tidlig tilgang til appen
                             og hjelp oss med å forme fremtidens historieopplevelse.
                         </p>
@@ -72,22 +71,22 @@ export default function LeadForm() {
 
                     {/* Counter Badge - moved below description */}
                     <div className="flex justify-center mb-8">
-                        <div className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20">
+                        <div className="inline-flex items-center gap-3 bg-[var(--burgundy)]/10 backdrop-blur-sm rounded-full px-6 py-3 border border-[var(--burgundy)]/20">
                             <div className="flex -space-x-2">
                                 {[...Array(4)].map((_, i) => (
                                     <div
                                         key={i}
-                                        className="w-8 h-8 rounded-full bg-[var(--accent)] border-2 border-[var(--burgundy)] flex items-center justify-center text-xs font-bold text-[var(--burgundy)]"
+                                        className="w-8 h-8 rounded-full bg-[var(--burgundy)] border-2 border-[var(--accent)] flex items-center justify-center text-xs font-bold text-white"
                                     >
                                         {['👤', '👤', '👤', '👤'][i]}
                                     </div>
                                 ))}
                             </div>
-                            <div className="text-white">
+                            <div className="text-[var(--text-dark)]">
                                 <span className="font-bold text-xl">
                                     {signupCount !== null ? signupCount : '...'}
                                 </span>
-                                <span className="text-white/80 ml-2">
+                                <span className="text-[var(--text-dark)]/80 ml-2">
                                     {signupCount === 1 ? 'person' : 'personer'} har meldt seg på
                                 </span>
                             </div>
@@ -95,7 +94,7 @@ export default function LeadForm() {
                     </div>
 
                     {/* Form Card */}
-                    <div className="bg-[var(--accent)] rounded-3xl p-8 md:p-12 shadow-2xl">
+                    <div className="bg-[var(--burgundy)]/10 rounded-3xl p-8 md:p-12 shadow-xl border border-[var(--burgundy)]/20">
                         {isSubmitted ? (
                             <div className="text-center py-8">
                                 <div className="w-20 h-20 bg-[var(--burgundy)] rounded-full flex items-center justify-center mx-auto mb-6">
@@ -208,26 +207,25 @@ export default function LeadForm() {
                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                                     </svg>
                                 ),
-                                title: 'Gratis for alltid',
-                                desc: 'Alpha-testere får premium gratis',
+                                title: 'Gratis prøveperiode',
+                                desc: 'Få gratis tilgang til hele appen i en måned',
                             },
                         ].map((benefit, index) => (
                             <div
                                 key={index}
-                                className="flex items-center gap-4 bg-white/10 backdrop-blur-sm rounded-2xl p-4 border border-white/20"
+                                className="flex items-center gap-4 bg-[var(--burgundy)]/10 backdrop-blur-sm rounded-2xl p-4 border border-[var(--burgundy)]/20"
                             >
-                                <div className="w-12 h-12 bg-[var(--accent)] rounded-xl flex items-center justify-center text-[var(--burgundy)] flex-shrink-0">
+                                <div className="w-12 h-12 bg-[var(--burgundy)] rounded-xl flex items-center justify-center text-white flex-shrink-0">
                                     {benefit.icon}
                                 </div>
                                 <div>
-                                    <h4 className="font-bold text-white">{benefit.title}</h4>
-                                    <p className="text-sm text-white/70">{benefit.desc}</p>
+                                    <h4 className="font-bold text-[var(--text-dark)]">{benefit.title}</h4>
+                                    <p className="text-sm text-[var(--text-dark)]/70">{benefit.desc}</p>
                                 </div>
                             </div>
                         ))}
                     </div>
                 </div>
-            </div>
         </section>
     );
 }

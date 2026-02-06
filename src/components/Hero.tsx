@@ -28,7 +28,7 @@ export default function Hero() {
         </h1>
 
         <p className="text-xl sm:text-2xl md:text-3xl text-white/90 max-w-2xl mx-auto mb-10 drop-shadow-lg">
-          Din portal til fortiden
+          En inngangsport til fortiden
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -51,7 +51,7 @@ export default function Hero() {
 
       {/* Scroll indicator */}
       <Link
-        href="#about"
+        href="#features"
         className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 animate-bounce"
         aria-label="Scroll ned"
       >

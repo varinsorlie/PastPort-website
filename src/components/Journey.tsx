@@ -1,60 +1,52 @@
-import { Lightbulb, Sun, Code, Rocket } from "lucide-react";
+import { Eye, Target, Heart } from "lucide-react";
 
 export default function Journey() {
-  const milestones = [
+  const values = [
     {
-      icon: Lightbulb,
-      title: "Ideen",
-      description: "Fra en lidenskap for historie og teknologi",
+      icon: Eye,
+      title: "Visjon",
+      description: "Vi skal tilgjengeliggjøre historisk kunnskap og objekter",
     },
     {
-      icon: Sun,
-      title: "Sommerstipend",
-      description: "Støtte til å utvikle konseptet videre",
+      icon: Target,
+      title: "Misjon",
+      description: "Gjennom gameifisering gjør vi historielæring gøy",
     },
     {
-      icon: Code,
-      title: "Utvikling",
-      description: "Fra prototype til fungerende app",
-    },
-    {
-      icon: Rocket,
-      title: "Fremtiden",
-      description: "Vår visjon for å gjøre historie tilgjengelig for alle",
+      icon: Heart,
+      title: "Verdier",
+      description: "Vi skal være empatiske, sannhetssøkende, transparente, og ha integritet i vårt arbeid",
     },
   ];
 
   return (
-    <section id="journey" className="section-padding bg-[var(--accent)]">
+    <section id="journey" className="section-padding bg-[var(--burgundy)]">
       <div className="max-w-5xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-[var(--text-dark)] mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
             Vår reise
           </h2>
-          <p className="text-lg text-[var(--text-dark)]/80 max-w-2xl mx-auto">
-            Pastport startet som en idé om å gjøre lokalhistorie mer
-            tilgjengelig og engasjerende. Med støtte fra sommerstipend har vi
-            utviklet en konsept av plattform og app som bringer fortiden til live. Vår visjon er å skape
-            en plattform der alle kan oppdage og dele historien rundt seg.
+          <p className="text-lg text-white/80 max-w-3xl mx-auto leading-relaxed">
+            Pastport begynte som en idé om å tilgjengeliggjøre historie på en engasjerende måte. Sommeren 2025 fikk vi muligheten til å utforske denne ideen, og resultatet har blitt en oversikt over kulturminner med morsomme spillelementer - Pastport.
           </p>
         </div>
 
-        {/* Milestones */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {milestones.map((milestone, index) => (
+        {/* Values circles */}
+        <div className="grid md:grid-cols-3 gap-8">
+          {values.map((value, index) => (
             <div
               key={index}
-              className="text-center p-4"
+              className="text-center p-6"
             >
-              <div className="w-14 h-14 rounded-full bg-[var(--burgundy)] flex items-center justify-center mx-auto mb-4">
-                <milestone.icon className="w-7 h-7 text-white" />
+              <div className="w-24 h-24 md:w-28 md:h-28 rounded-full bg-[var(--accent)] flex items-center justify-center mx-auto mb-6 shadow-lg">
+                <value.icon className="w-10 h-10 md:w-12 md:h-12 text-[var(--burgundy)]" />
               </div>
-              <h3 className="text-lg font-semibold text-[var(--text-dark)] mb-2">
-                {milestone.title}
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
+                {value.title}
               </h3>
-              <p className="text-sm text-[var(--text-dark)]/70">
-                {milestone.description}
+              <p className="text-white/80 leading-relaxed">
+                {value.description}
               </p>
             </div>
           ))}

@@ -1,13 +1,8 @@
-"use client";
-
 import Image from "next/image";
-import { Map, Compass, Layers } from "lucide-react";
-import ScrollCarousel from "./ScrollCarousel";
 
 const features = [
   {
     id: 1,
-    icon: Map,
     image: "/images/feature-map.png",
     title: "Kart",
     headline: "Finn historiske steder",
@@ -16,7 +11,6 @@ const features = [
   },
   {
     id: 2,
-    icon: Compass,
     image: "/images/feature-quest.png",
     title: "Quest",
     headline: "Løs gåter og oppdrag",
@@ -25,7 +19,6 @@ const features = [
   },
   {
     id: 3,
-    icon: Layers,
     image: "/images/feature-cards.png",
     title: "Kort",
     headline: "Bygg din samling",
@@ -36,33 +29,34 @@ const features = [
 
 function FeatureCard({ feature }: { feature: (typeof features)[0] }) {
   return (
-    <article
-      className="
-        flex-shrink-0 w-[300px] md:w-[340px] scroll-snap-align-center
-        bg-[var(--accent)] rounded-3xl overflow-hidden shadow-xl card-hover
-      "
-    >
-      {/* Image container */}
-      <div className="relative h-44 md:h-52 bg-black/10">
-        <Image
-          src={feature.image}
-          alt={feature.title}
-          fill
-          className="object-cover"
-          sizes="340px"
-        />
-        {/* Icon badge */}
-        <div className="absolute top-4 left-4 w-12 h-12 rounded-xl bg-[var(--burgundy)] flex items-center justify-center shadow-lg">
-          <feature.icon className="w-6 h-6 text-[var(--accent)]" />
+    <article className="flex flex-col">
+      {/* Phone mockup with screenshot */}
+      <div className="relative mx-auto mb-6">
+        {/* Phone frame */}
+        <div className="relative w-[200px] md:w-[240px] mx-auto">
+          {/* Phone bezel */}
+          <div className="bg-[var(--burgundy)]/30 rounded-[2rem] p-1.5 shadow-2xl">
+            {/* Screen - using actual screenshot aspect ratio */}
+            <div className="relative rounded-[1.5rem] overflow-hidden bg-[var(--accent)]">
+              <Image
+                src={feature.image}
+                alt={feature.title}
+                width={240}
+                height={520}
+                className="w-full h-auto"
+                sizes="240px"
+              />
+            </div>
+          </div>
         </div>
       </div>
 
       {/* Content */}
-      <div className="p-6">
+      <div className="text-center px-4">
         <span className="text-sm font-semibold text-[var(--burgundy)] uppercase tracking-wider">
           {feature.title}
         </span>
-        <h3 className="text-xl font-bold text-[var(--text-dark)] mt-1 mb-3">
+        <h3 className="text-xl font-bold text-[var(--text-dark)] mt-2 mb-3">
           {feature.headline}
         </h3>
         <p className="text-[var(--text-dark)]/70 leading-relaxed text-sm">
@@ -75,24 +69,24 @@ function FeatureCard({ feature }: { feature: (typeof features)[0] }) {
 
 export default function Features() {
   return (
-    <section id="features" className="py-20 md:py-28 bg-[var(--burgundy)]">
+    <section id="features" className="section-padding bg-[var(--accent)]">
       <div className="max-w-7xl mx-auto">
         {/* Section header */}
-        <div className="text-center px-4 mb-12">
-          <h2 className="text-3xl md:text-6xl font-bold text-white mb-4">
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-5xl font-bold text-[var(--text-dark)] mb-6">
             Pastport
           </h2>
-          <p className="text-lg text-white/80 max-w-2xl mx-auto">
-            Alt du trenger for å oppdage fortiden – rett i lomma
+          <p className="text-lg md:text-xl text-[var(--text-dark)]/80 max-w-3xl mx-auto leading-relaxed">
+            La fortiden komme til live ved å oppdage skjulte perler! Velg perioder og temaer som interesserer deg, oppdag steder på kartet, ha det gøy med quester, og samle historiekort fra stedene du besøker.
           </p>
         </div>
 
-        {/* Scroll carousel with arrows */}
-        <ScrollCarousel>
+        {/* Feature images grid */}
+        <div className="grid md:grid-cols-3 gap-8">
           {features.map((feature) => (
             <FeatureCard key={feature.id} feature={feature} />
           ))}
-        </ScrollCarousel>
+        </div>
       </div>
     </section>
   );
