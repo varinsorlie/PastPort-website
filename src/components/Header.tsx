@@ -4,103 +4,104 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 
+const NAV_LINKS = [
+  { href: "#features", label: "App" },
+  { href: "https://pasthive.no", label: "Plattform", external: true },
+  { href: "#team", label: "Teamet" },
+] as const;
+
+const CTA_HREF = "https://nettskjema.no/a/566846#/page/1";
+
 export default function Header() {
   const [scrolled, setScrolled] = useState(false);
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 50);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    const onScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  const navLinks = [
-    { href: "#features", label: "App" },
-    { href: "https://pasthive.no", label: "Plattform", external: true },
-    { href: "#team", label: "Teamet" },
-  ];
-
   return (
-    <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled
-          ? "bg-black/80 backdrop-blur-md shadow-lg"
-          : "bg-transparent"
-      }`}
-    >
-      <div className="max-w-7xl mx-auto px-4 md:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          {/* Logo */}
-          <Link
-            href="/"
-            className="text-2xl md:text-3xl font-bold text-white tracking-wide font-[var(--font-cinzel)]"
-          >
-            Pastport
-          </Link>
+    <>
+      <header
+        className={`fixed top-0 left-0 right-0 z-50 h-[72px] flex items-center justify-between px-6 md:px-10
+          transition-all duration-300 border-b
+          ${scrolled
+            ? "bg-bg/90 backdrop-blur-md border-gold/20"
+            : "bg-transparent border-transparent"
+          }`}
+      >
+        {/* Logo */}
+        <Link
+          href="/"
+          className="font-display text-[1.6rem] font-black tracking-wider text-gold"
+        >
+          Pastport
+        </Link>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                target={link.external ? "_blank" : undefined}
-                rel={link.external ? "noopener noreferrer" : undefined}
-                className="text-white/90 hover:text-white text-lg font-medium transition-colors duration-200 hover:scale-105 transform"
-              >
-                {link.label}
-              </Link>
-            ))}
+        {/* Desktop nav */}
+        <nav className="hidden md:flex items-center gap-8">
+          {NAV_LINKS.map((link) => (
             <Link
-              href="https://nettskjema.no/a/566846#/page/1"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary text-base"
+              key={link.label}
+              href={link.href}
+              target={link.external ? "_blank" : undefined}
+              rel={link.external ? "noopener noreferrer" : undefined}
+              className="text-sm tracking-[0.06em] uppercase font-medium
+                text-[var(--text-muted)] hover:text-gold transition-colors duration-200"
             >
-              Bli med
+              {link.label}
             </Link>
-          </nav>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="md:hidden p-2 text-white"
-            aria-label="Toggle menu"
+          ))}
+          <Link
+            href={CTA_HREF}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gold text-bg text-sm tracking-[0.08em] uppercase font-semibold
+              px-5 py-2.5 rounded-sm transition-all duration-200 hover:bg-[#f0d380] hover:-translate-y-px"
           >
-            {mobileMenuOpen ? <X size={28} /> : <Menu size={28} />}
-          </button>
-        </div>
+            Bli med
+          </Link>
+        </nav>
 
-        {/* Mobile Navigation */}
-        {mobileMenuOpen && (
-          <nav className="md:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-lg border-t border-white/10">
-            <div className="flex flex-col p-6 gap-4">
-              {navLinks.map((link) => (
-                <Link
-                  key={link.label}
-                  href={link.href}
-                  target={link.external ? "_blank" : undefined}
-                  rel={link.external ? "noopener noreferrer" : undefined}
-                  onClick={() => setMobileMenuOpen(false)}
-                  className="text-white/90 hover:text-white text-xl py-2"
-                >
-                  {link.label}
-                </Link>
-              ))}
-              <Link
-                href="https://nettskjema.no/a/566846#/page/1"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-primary text-center mt-2"
-              >
-                Bli med
-              </Link>
-            </div>
-          </nav>
-        )}
-      </div>
-    </header>
+        {/* Hamburger */}
+        <button
+          className="md:hidden p-2 text-[var(--text)] cursor-pointer"
+          onClick={() => setMenuOpen((v) => !v)}
+          aria-label="Toggle menu"
+        >
+          {menuOpen ? <X size={26} /> : <Menu size={26} />}
+        </button>
+      </header>
+
+      {/* Mobile nav overlay */}
+      {menuOpen && (
+        <div className="md:hidden fixed inset-0 top-[72px] bg-bg/[0.98] z-40 flex flex-col items-center justify-center gap-8">
+          {NAV_LINKS.map((link) => (
+            <Link
+              key={link.label}
+              href={link.href}
+              target={link.external ? "_blank" : undefined}
+              rel={link.external ? "noopener noreferrer" : undefined}
+              onClick={() => setMenuOpen(false)}
+              className="text-2xl font-light tracking-wide text-[var(--text)] hover:text-gold transition-colors duration-200"
+            >
+              {link.label}
+            </Link>
+          ))}
+          <Link
+            href={CTA_HREF}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setMenuOpen(false)}
+            className="bg-gold text-bg font-semibold tracking-[0.08em] uppercase
+              px-8 py-3.5 rounded-sm mt-4 hover:bg-[#f0d380] transition-colors duration-200"
+          >
+            Bli med
+          </Link>
+        </div>
+      )}
+    </>
   );
 }

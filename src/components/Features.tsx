@@ -1,93 +1,112 @@
-import Image from "next/image";
+"use client";
 
-const features = [
+import Image from "next/image";
+import SectionLabel from "./SectionLabel";
+import { useReveal } from "./UseReveal";
+
+interface Feature {
+  id: number;
+  image: string;
+  tag: string;
+  headline: string;
+  description: string;
+}
+
+const features: Feature[] = [
   {
     id: 1,
     image: "/images/feature-map.png",
-    title: "Kart",
+    tag: "Kart",
     headline: "Finn historiske steder",
-    description:
-      "Utforsk kartet og oppdag steder basert på dine valgte temaer og tidsepoker.",
+    description: "Utforsk kartet og oppdag steder basert på dine valgte temaer og tidsepoker.",
   },
   {
     id: 2,
     image: "/images/feature-quest.png",
-    title: "Quest",
+    tag: "Quest",
     headline: "Løs gåter og oppdrag",
-    description:
-      "Delta i interaktive eventyr som bringer historien til live.",
+    description: "Delta i interaktive eventyr som bringer historien til live.",
   },
   {
     id: 3,
     image: "/images/feature-cards.png",
-    title: "Kort",
+    tag: "Kort",
     headline: "Bygg din samling",
-    description:
-      "Samle unike historiekort og objekter inspirert av lokal kultur.",
+    description: "Samle unike historiekort og objekter inspirert av lokal kultur.",
   },
 ];
 
-function FeatureCard({ feature }: { feature: (typeof features)[0] }) {
-  return (
-    <article className="flex flex-col">
-      {/* Phone mockup with screenshot */}
-      <div className="relative mx-auto mb-6">
-        {/* Phone frame */}
-        <div className="relative w-[200px] md:w-[240px] mx-auto">
-          {/* Phone bezel */}
-          <div className="bg-[var(--burgundy)]/30 rounded-[2rem] p-1.5 shadow-2xl">
-            {/* Screen - using actual screenshot aspect ratio */}
-            <div className="relative rounded-[1.5rem] overflow-hidden bg-[var(--accent)]">
-              <Image
-                src={feature.image}
-                alt={feature.title}
-                width={240}
-                height={520}
-                className="w-full h-auto"
-                sizes="240px"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-
-      {/* Content */}
-      <div className="text-center px-4">
-        <span className="text-sm font-semibold text-[var(--burgundy)] uppercase tracking-wider">
-          {feature.title}
-        </span>
-        <h3 className="text-xl font-bold text-[var(--text-dark)] mt-2 mb-3">
-          {feature.headline}
-        </h3>
-        <p className="text-[var(--text-dark)]/70 leading-relaxed text-sm">
-          {feature.description}
-        </p>
-      </div>
-    </article>
-  );
-}
-
 export default function Features() {
+  const ref = useReveal();
+
   return (
-    <section id="features" className="section-padding bg-[var(--accent)]">
-      <div className="max-w-7xl mx-auto">
-        {/* Section header */}
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-5xl font-bold text-[var(--text-dark)] mb-6">
-            Pastport
+    <section id="features" className="py-28 px-6" ref={ref}>
+      <div className="max-w-6xl mx-auto">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <div className="reveal">
+            <SectionLabel centered>Pastport</SectionLabel>
+          </div>
+          <h2 className="reveal reveal-delay-1 font-display font-black tracking-tight leading-tight mb-5 text-[clamp(2rem,5vw,3.5rem)] text-[var(--text)]">
+            Tre måter å
+            <br />
+            oppleve historien
           </h2>
-          <p className="text-lg md:text-xl text-[var(--text-dark)]/80 max-w-3xl mx-auto leading-relaxed">
-            La fortiden komme til live ved å oppdage skjulte perler! Velg perioder og temaer som interesserer deg, oppdag steder på kartet, ha det gøy med quester, og samle historiekort fra stedene du besøker.
+          <p className="reveal reveal-delay-2 max-w-2xl mx-auto text-[1.05rem] leading-relaxed font-light text-[var(--text-muted)]">
+            La fortiden komme til live ved å oppdage skjulte perler! Velg
+            perioder og temaer som interesserer deg, oppdag steder på kartet, ha
+            det gøy med quester, og samle historiekort fra stedene du besøker.
           </p>
         </div>
 
-        {/* Feature images grid */}
+        {/* Cards */}
         <div className="grid md:grid-cols-3 gap-8">
-          {features.map((feature) => (
-            <FeatureCard key={feature.id} feature={feature} />
+          {features.map((f, i) => (
+            <FeatureCard key={f.id} feature={f} delay={i} />
           ))}
         </div>
       </div>
     </section>
+  );
+}
+
+function FeatureCard({ feature, delay }: { feature: Feature; delay: number }) {
+  return (
+    <article
+      className={`reveal reveal-delay-${delay} flex flex-col bg-surface border border-gold/20
+        rounded-[4px] overflow-hidden transition-all duration-300
+        hover:border-gold/40 hover:-translate-y-1`}
+    >
+      {/* Phone mockup */}
+      <div className="flex justify-center pt-8 px-8">
+        <div className="w-[160px] rounded-[24px] p-2 shadow-2xl border border-gold/20 bg-[#1e1e2e]">
+          <div
+            className="rounded-[18px] overflow-hidden relative bg-bg"
+            style={{ aspectRatio: "9/19.5" }}
+          >
+            <Image
+              src={feature.image}
+              alt={feature.tag}
+              fill
+              className="object-cover"
+              sizes="160px"
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* Info */}
+      <div className="px-7 pb-8 pt-6">
+        <span className="block text-[0.65rem] tracking-[0.2em] uppercase font-semibold mb-2 text-gold">
+          {feature.tag}
+        </span>
+        <h3 className="font-display font-bold text-[1.25rem] mb-2 text-[var(--text)]">
+          {feature.headline}
+        </h3>
+        <p className="text-[0.9rem] leading-relaxed font-light text-[var(--text-muted)]">
+          {feature.description}
+        </p>
+      </div>
+    </article>
   );
 }
