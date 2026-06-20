@@ -15,19 +15,9 @@ const members = [
     image: "/images/team/sofie.png",
   },
   {
-        name: "Jakob Anthony",
-        role: "Daglig leder",
-        image: "/images/team/jakob.jpg",
-    },
-  {
     name: "Vårin Sørlie",
     role: "Teknisk utvikler",
     image: "/images/team/vaarin.png",
-  },
-  {
-    name: "Dmitry Solt",
-    role: "Teknisk utvikler",
-    image: "/images/team/dmitry.png",
   },
 ];
 

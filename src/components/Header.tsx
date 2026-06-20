@@ -54,7 +54,7 @@ export default function Header() {
               </Link>
             ))}
             <Link
-              href="https://nettskjema.no/a/566846#/page/1"
+              href="mailto:support@pasthive.no"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary text-base"

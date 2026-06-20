@@ -156,7 +156,7 @@ export default function LeadForm() {
                                     <button
                                         type="submit"
                                         disabled={isSubmitting}
-                                        className="bg-[var(--burgundy)] text-white px-10 py-4 rounded-full font-semibold text-lg hover:bg-[var(--burgundy)]/90 transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 shadow-lg"
+                                        className="btn-tertiary"
                                     >
                                         {isSubmitting ? (
                                             <span className="flex items-center gap-2">
