@@ -18,7 +18,7 @@ export default function Header() {
 
   const navLinks = [
     { href: "#features", label: "App" },
-    { href: "https://pasthive.no", label: "Plattform", external: true },
+    // { href: "https://pasthive.no", label: "Plattform", external: true },
     { href: "#team", label: "Teamet" },
   ];
 
@@ -26,18 +26,18 @@ export default function Header() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled
-          ? "bg-black/80 backdrop-blur-md shadow-lg"
+          ? "bg-[var(--burgundy)]/80 backdrop-blur-md shadow-lg"
           : "bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 md:px-8">
-        <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="flex items-center justify-between h-16 md:h-16">
           {/* Logo */}
           <Link
             href="/"
-            className="text-2xl md:text-3xl font-bold text-white tracking-wide font-[var(--font-cinzel)]"
+            className="text-xl font-bold tracking-widest font-[var(--font-playfair)]"
           >
-            Pastport
+            <h5>PASTPORT</h5>
           </Link>
 
           {/* Desktop Navigation */}
@@ -46,9 +46,9 @@ export default function Header() {
               <Link
                 key={link.label}
                 href={link.href}
-                target={link.external ? "_blank" : undefined}
-                rel={link.external ? "noopener noreferrer" : undefined}
-                className="text-white/90 hover:text-white text-lg font-medium transition-colors duration-200 hover:scale-105 transform"
+                // target={link.external ? "_blank" : undefined}
+                // rel={link.external ? "noopener noreferrer" : undefined}
+                className="text-white/90 hover:text-white text-sm font-medium transition-colors duration-200 hover:scale-105 transform"
               >
                 {link.label}
               </Link>
@@ -57,9 +57,9 @@ export default function Header() {
               href="mailto:support@pasthive.no"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary text-base"
+              className="text-white/90 hover:text-white text-sm font-medium transition-colors duration-200 hover:scale-105 transform"
             >
-              Bli med
+              Kontakt oss
             </Link>
           </nav>
 
@@ -81,8 +81,8 @@ export default function Header() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  target={link.external ? "_blank" : undefined}
-                  rel={link.external ? "noopener noreferrer" : undefined}
+                  // target={link.external ? "_blank" : undefined}
+                  // rel={link.external ? "noopener noreferrer" : undefined}
                   onClick={() => setMobileMenuOpen(false)}
                   className="text-white/90 hover:text-white text-xl py-2"
                 >

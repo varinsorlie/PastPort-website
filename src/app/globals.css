@@ -2,12 +2,15 @@
 
 :root {
   /* Theme colors - burgundy and cream */
-  --burgundy: #681818;
-  --accent: #DAD0BC;
-  --accent-hover: #3B7994;
+  --burgundy: #8B6F47;
+  --accent: #F4E8D0;
+  --dark-blue: #0e3839;
+  --blue: #518F90;
+  --purple: #B758FF;
+  --dark-purple: #4E107E;
   --text-dark: #1f2933;
   --text-light: rgba(255, 255, 255, 0.87);
-  
+
   /* Legacy - keeping for compatibility */
   --bg-main: #4c463c;
   --bg-second-main: #504a3d;
@@ -23,7 +26,7 @@ html {
 }
 
 body {
-  font-family: 'Cinzel', serif;
+  font-family: var(--font-dm-sans), sans-serif;
   background-color: var(--burgundy);
   color: var(--text-light);
   line-height: 1.5;
@@ -32,6 +35,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-playfair), serif;
 }
 
 /* Scrollbar hiding for horizontal scroll */
@@ -50,7 +57,7 @@ body {
 
 /* Custom button styles */
 .btn-primary {
-  @apply inline-flex items-center border-2 border-transparent justify-center px-8 py-3 bg-[var(--accent)] text-[var(--text-dark)] font-semibold rounded-lg shadow-lg transition-all duration-300 hover:bg-transparent hover:text-white hover:border-2 hover:border-white  hover:shadow-xl;
+  @apply inline-flex items-center border-2 border-transparent justify-center px-8 py-3 bg-[var(--blue)] text-[var(--text-light)] font-semibold rounded-lg shadow-lg transition-all duration-300 hover:bg-transparent hover:text-white hover:border-2 hover:border-white  hover:shadow-xl;
 }
 
 .btn-secondary {

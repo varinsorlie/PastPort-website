@@ -1,13 +1,29 @@
 import type { Metadata } from "next";
 import { Cinzel, Inter } from "next/font/google";
+import { Playfair_Display } from 'next/font/google';
+import { DM_Sans } from 'next/font/google';
 import Script from "next/script";
 import "./globals.css";
 
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  weight: ['400', '500', '600'],
+  style: ['normal', 'italic'],
+  variable: '--font-playfair',
+})
+
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
+  variable: '--font-dm-sans',
+})
 const cinzel = Cinzel({
   variable: "--font-cinzel",
   subsets: ["latin"],
   display: "swap",
 });
+
 
 const inter = Inter({
   variable: "--font-inter",
@@ -145,7 +161,7 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="nb" className={`${cinzel.variable} ${inter.variable}`}>
+    <html lang="nb" className={`${playfair.variable} ${inter.variable}`}>
       <head>
         <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />

@@ -3,27 +3,35 @@ import Image from "next/image";
 const features = [
   {
     id: 1,
-    image: "/images/feature-map.png",
-    title: "Kart",
-    headline: "Finn historiske steder",
+    image: "/images/Pastport-home.png",
+    title: "Dashboard",
+    headline: "Bygg din kunnskap",
     description:
-      "Utforsk kartet og oppdag steder basert på dine valgte temaer og tidsepoker.",
+      "Utforsk spillelementer og oppdag steder basert på dine valgte temaer og tidsepoker.",
   },
   {
     id: 2,
-    image: "/images/feature-quest.png",
-    title: "Quest",
-    headline: "Løs gåter og oppdrag",
+    image: "/images/pastport-profile.png",
+    title: "Profil",
+    headline: "Velg interesser",
     description:
-      "Delta i interaktive eventyr som bringer historien til live.",
+      "Lag en personlig tilpasset profil som matcher dine interesser.",
   },
   {
     id: 3,
-    image: "/images/feature-cards.png",
-    title: "Kort",
-    headline: "Bygg din samling",
+    image: "/images/Pastport-quests.png",
+    title: "Quester",
+    headline: "Løs gåter og oppdrag",
     description:
-      "Samle unike historiekort og objekter inspirert av lokal kultur.",
+      "Lær gjennom spillbaserte quester, laget av historikere.",
+  },
+  {
+    id: 4,
+    image: "/images/Pastport-this-quest.png",
+    title: "Kart",
+    headline: "Besøk fortiden",
+    description:
+      "Besøk historiske steder i et interaktivt kart.",
   },
 ];
 
@@ -77,12 +85,18 @@ export default function Features() {
             Pastport
           </h2>
           <p className="text-lg md:text-xl text-[var(--text-dark)]/80 max-w-3xl mx-auto leading-relaxed">
-            La fortiden komme til live ved å oppdage skjulte perler! Velg perioder og temaer som interesserer deg, oppdag steder på kartet, ha det gøy med quester, og samle historiekort fra stedene du besøker.
+            Historiske quester laget og skrevet av erfarne historikere!
           </p>
+          <p className="text-lg md:text-xl text-[var(--text-dark)]/80 max-w-3xl mx-auto leading-relaxed">
+           Oppdag skjulte hendelser fra ditt lokalområde.
+            Velg perioder, områder og temaer som interesserer deg.
+            Samle premier underveis i læringen.
+          </p>
+          
         </div>
 
         {/* Feature images grid */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-4 gap-4">
           {features.map((feature) => (
             <FeatureCard key={feature.id} feature={feature} />
           ))}

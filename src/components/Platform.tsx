@@ -19,7 +19,7 @@ export default function Platform() {
   ];
 
   return (
-    <section className="section-padding bg-[var(--burgundy)]">
+    <section className="section-padding bg-[var(--blue)]">
       <div className="max-w-7xl mx-auto">
         {/* Section header */}
         <div className="text-center mb-12">
@@ -65,16 +65,17 @@ export default function Platform() {
         </div>
 
         {/* CTA button */}
-        <div className="text-center">
+        {/* <div className="text-center">
           <Link
-            href="https://pasthive.no"
+            href="" //"https://pasthive.no"
             target="_blank"
             rel="noopener noreferrer"
-            className="btn-primary"
+            className="btn-tertiary"
           >
+            Kommer snart
             Utforsk Pasthive
           </Link>
-        </div>
+        </div> */}
       </div>
     </section>
   );
