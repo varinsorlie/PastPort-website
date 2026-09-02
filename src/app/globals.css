@@ -1,0 +1,84 @@
+@import "tailwindcss";
+
+:root {
+  /* Theme colors - burgundy and cream */
+  --burgundy: #8B6F47;
+  --accent: #F4E8D0;
+  --dark-blue: #0e3839;
+  --blue: #518F90;
+  --purple: #B758FF;
+  --dark-purple: #4E107E;
+  --text-dark: #1f2933;
+  --text-light: rgba(255, 255, 255, 0.87);
+
+  /* Legacy - keeping for compatibility */
+  --bg-main: #4c463c;
+  --bg-second-main: #504a3d;
+  --bg-soft: #eef6f3;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-dm-sans), sans-serif;
+  background-color: var(--burgundy);
+  color: var(--text-light);
+  line-height: 1.5;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-playfair), serif;
+}
+
+/* Scrollbar hiding for horizontal scroll */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* Scroll snap */
+.scroll-snap-align-center {
+  scroll-snap-align: center;
+}
+
+/* Custom button styles */
+.btn-primary {
+  @apply inline-flex items-center border-2 border-transparent justify-center px-8 py-3 bg-[var(--blue)] text-[var(--text-light)] font-semibold rounded-lg shadow-lg transition-all duration-300 hover:bg-transparent hover:text-white hover:border-2 hover:border-white  hover:shadow-xl;
+}
+
+.btn-secondary {
+  @apply inline-flex items-center justify-center px-6 py-2.5 border-2 border-white/30 text-white font-medium rounded-lg transition-all duration-300 hover:bg-transparent hover:border-white hover:text-white;
+}
+
+.btn-tertiary {
+  @apply inline-flex items-center border-2 border-transparent justify-center px-8 py-3 bg-[var(--burgundy)] text-white font-semibold rounded-lg shadow-lg transition-all duration-300 hover:bg-transparent hover:text-[var(--text-dark)] hover:border-2 hover:border-[var(--burgundy)]  hover:shadow-xl;
+}
+
+/* Card hover effects */
+.card-hover {
+  @apply transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl;
+}
+
+/* Glass effect */
+.glass {
+  @apply backdrop-blur-md bg-white/10;
+}
+
+/* Section padding consistency */
+.section-padding {
+  @apply py-20 md:py-28 px-4 md:px-8;
+}
