@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 
 
 const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxAmbbB2ueryxR7HO3iyHWathcYmTeoLPjjnWRf2E2F1zTKkiTNtFcyIwrqQvJqB8HFXQ/exec';
-const SHARED_SECRET = PropertiesService.getScriptProperties().getProperty('SHARED_SECRET');
+const SHARED_TOKEN = 'jghdqwrfjn6&8!besjhgr';
 
 export default function LeadForm() {
     const [name, setName] = useState('');
