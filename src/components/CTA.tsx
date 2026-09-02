@@ -1,13 +1,16 @@
+/// <reference types="google-apps-script" />
 'use client';
 
 import { useState, useEffect } from 'react';
 
-// Replace with your Google Apps Script Web App URL
+
 const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbxAmbbB2ueryxR7HO3iyHWathcYmTeoLPjjnWRf2E2F1zTKkiTNtFcyIwrqQvJqB8HFXQ/exec';
+const SHARED_SECRET = PropertiesService.getScriptProperties().getProperty('SHARED_SECRET');
 
 export default function LeadForm() {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
+    const [website, setWebsite] = useState(''); // honeypot — must stay empty
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSubmitted, setIsSubmitted] = useState(false);
     const [error, setError] = useState('');
@@ -30,17 +33,28 @@ export default function LeadForm() {
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
+
+        // Silently "succeed" for bots that filled the honeypot field —
+        // don't tell them they were caught.
+        if (website) {
+            setIsSubmitted(true);
+            setName('');
+            setEmail('');
+            setWebsite('');
+            return;
+        }
+
         setIsSubmitting(true);
         setError('');
 
         try {
-            const response = await fetch(GOOGLE_SCRIPT_URL, {
+            await fetch(GOOGLE_SCRIPT_URL, {
                 method: 'POST',
                 mode: 'no-cors', // Required for Google Apps Script
                 headers: {
                     'Content-Type': 'application/json',
                 },
-                body: JSON.stringify({ name, email }),
+                body: JSON.stringify({ name, email, website, token: SHARED_TOKEN }),
             });
 
             // With no-cors, we can't read the response, so we assume success
@@ -117,6 +131,24 @@ export default function LeadForm() {
                             </div>
                         ) : (
                             <form onSubmit={handleSubmit} className="space-y-6">
+                                {/* Honeypot field — hidden from real users via CSS + tabIndex,
+                                    but visible to most naive form-filling bots. */}
+                                <div
+                                    style={{ position: 'absolute', left: '-9999px', top: '-9999px' }}
+                                    aria-hidden="true"
+                                >
+                                    <label htmlFor="website">Website</label>
+                                    <input
+                                        type="text"
+                                        id="website"
+                                        name="website"
+                                        tabIndex={-1}
+                                        autoComplete="off"
+                                        value={website}
+                                        onChange={(e) => setWebsite(e.target.value)}
+                                    />
+                                </div>
+
                                 <div className="grid md:grid-cols-2 gap-6">
                                     <div>
                                         <label htmlFor="name" className="block text-sm font-semibold text-[var(--text-dark)] mb-2">
@@ -229,7 +261,6 @@ export default function LeadForm() {
         </section>
     );
 }
-
 // import Link from "next/link";
 // import { ArrowRight } from "lucide-react";
 

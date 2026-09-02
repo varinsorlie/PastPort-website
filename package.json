@@ -9,13 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "lucide-react": "^0.468.0",
     "next": "^15.1.4",
     "react": "^19.0.3",
-    "react-dom": "^19.0.3",
-    "lucide-react": "^0.468.0"
+    "react-dom": "^19.0.3"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.0.0",
+    "@types/google-apps-script": "^2.0.12",
     "@types/node": "^22.10.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
